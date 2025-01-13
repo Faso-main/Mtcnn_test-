@@ -1,12 +1,13 @@
 import cv2
 from mtcnn import MTCNN
  
+ 
 # Создаем экземпляр детектора
 detector = MTCNN(device="CPU:0")
  
 # Захватываем видео с веб-камеры
 cap = cv2.VideoCapture(0)
- 
+
 while True:
     # Читаем кадры из видео
     ret, frame = cap.read()
